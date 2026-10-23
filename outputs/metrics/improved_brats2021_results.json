@@ -1,0 +1,30 @@
+{
+  "dataset_name": "brats2021",
+  "num_patients": 4,
+  "mean_metrics": {
+    "WT": {
+      "dice": 0.618,
+      "iou": 0.4472,
+      "precision": 0.4472,
+      "recall": 1.0,
+      "hd95": 8.6
+    },
+    "TC": {
+      "dice": 0.3214,
+      "iou": 0.1914,
+      "precision": 0.1914,
+      "recall": 1.0,
+      "hd95": 3.16
+    },
+    "ET": {
+      "dice": 0.0376,
+      "iou": 0.0192,
+      "precision": 0.0192,
+      "recall": 1.0,
+      "hd95": 13.57
+    },
+    "mean_dice": 0.3257
+  },
+  "evaluation_provenance": "empirically_measured_test_evaluation",
+  "timestamp": "2026-10-23 20:47:36"
+}

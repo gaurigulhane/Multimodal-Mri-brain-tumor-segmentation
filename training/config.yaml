@@ -1,0 +1,64 @@
+# Training Configuration for Multimodal MRI Brain Tumor Segmentation
+# =====================================================================
+# Edit this file to control all training hyper-parameters and paths.
+# All relative paths are resolved from the project root directory.
+
+project:
+  name: "Multimodal MRI-Based Brain Tumor Segmentation"
+  version: "1.0.0"
+  seed: 42
+
+# ---------------------------------------------------------------------------
+# Model
+# ---------------------------------------------------------------------------
+model:
+  type: "improved"          # "improved" or "baseline"
+  in_channels: 4            # T1, T1ce, T2, FLAIR
+  out_channels: 3           # WT, TC, ET
+  features: [32, 64, 128, 256]
+  bottleneck_features: 512
+
+# ---------------------------------------------------------------------------
+# Dataset
+# ---------------------------------------------------------------------------
+dataset:
+  name: "brats2021"         # "brats2021" or "brats2023_met"
+  data_root: "./data/BraTS2021"
+  patch_size: [128, 128, 128]
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  num_workers: 0            # set >0 on Linux; keep 0 on Windows to avoid multiprocessing issues
+
+# ---------------------------------------------------------------------------
+# Training
+# ---------------------------------------------------------------------------
+training:
+  epochs: 100
+  batch_size: 1
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  optimizer: "adamw"        # "adam" or "adamw"
+  scheduler: "cosine"       # "cosine" or "plateau"
+  scheduler_warmup_epochs: 5
+  loss_function: "dice_focal"   # "dice" | "focal" | "dice_focal" | "dice_ce" | "tversky"
+  mixed_precision: false    # set true if GPU supports FP16 (requires CUDA)
+  gradient_clip_norm: 1.0
+  early_stopping_patience: 20
+  validate_every_n_epochs: 1
+
+# ---------------------------------------------------------------------------
+# Checkpoints
+# ---------------------------------------------------------------------------
+checkpoints:
+  save_dir: "./checkpoints"
+  save_best_only: false     # if false, also saves the last-N checkpoints
+  keep_last_n: 5            # number of recent checkpoints to retain
+
+# ---------------------------------------------------------------------------
+# Outputs
+# ---------------------------------------------------------------------------
+outputs:
+  log_dir: "./outputs/logs"
+  metrics_dir: "./outputs/metrics"
+  visualization_dir: "./outputs/visualizations"
