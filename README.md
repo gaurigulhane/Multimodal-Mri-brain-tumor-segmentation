@@ -1,8 +1,6 @@
 # Multimodal MRI-Based Brain Tumor Segmentation Using an Improved Attention-Based Deep Learning Framework
 
 
----
-
 ## 📌 Project Overview
 This repository contains the complete implementation of the final-year AI/ML project: **“Multimodal MRI-Based Brain Tumor Segmentation Using an Improved Attention-Based Deep Learning Framework.”**
 
@@ -204,9 +202,6 @@ Run the complete unit and integration test suite:
 ```powershell
 python -m pytest tests/ -v
 ```
-*(All 14 tests passing: attention blocks, residual units, baseline model, improved model, loss functions, metrics computation, label mapping, array inference, and backend endpoints.)*
 
----
 
-## 📜 License
-This project is licensed under the MIT License.
+
