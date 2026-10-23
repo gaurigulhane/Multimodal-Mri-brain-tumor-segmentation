@@ -1,12 +1,5 @@
 # Multimodal MRI-Based Brain Tumor Segmentation Using an Improved Attention-Based Deep Learning Framework
 
-[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.13-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.14-ee4c2c.svg)](https://pytorch.org/)
-[![MONAI](https://img.shields.io/badge/MONAI-1.6.1-blueviolet.svg)](https://monai.io/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-38bdf8.svg)](https://tailwindcss.com/)
-[![Tests](https://img.shields.io/badge/Tests-14%2F14%20Passed-brightgreen.svg)]()
 
 ---
 
